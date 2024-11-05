@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>My Weather App</title>
+  </head>
+
+  <body>
+    <div class="weather-app">
+      <header>
+        <a href="/" aria-label="Reload Homepage">
+          <img
+            src="./images/logo.png"
+            width="200"
+            height="50"
+            alt="Weather App Logo"
+            class="logo-icon"
+          />
+        </a>
+        <form id="search-form" class="search-bar">
+          <input
+            type="search"
+            id="search-input"
+            class="search-input"
+            placeholder="Enter a City..."
+            autofocus
+            required
+          />
+          <input
+            type="submit"
+            value="Search"
+            aria-label="Search for City"
+            class="search-button"
+          />
+        </form>
+      </header>
+
+      <main>
+        <div class="current-weather-container">
+          <div class="current-weather">
+            <h1 id="current-city">City Name</h1>
+            <div class="current-details">
+              <p id="current-date">Date & Time</p>
+              <span id="current-description">Weather Description</span><br />
+              <span id="current-humidity" class="humidity-level">Humidity: 00%</span>
+              &bull;
+              <span id="current-wind" class="wind-speed">Wind: 00 km/h</span>
+            </div>
+          </div>
+
+          <div class="current-temperature">
+            <span id="current-icon">☀</span>
+            <span id="current-temp" class="current-temperature-value">00</span>
+            <span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+
+        <div id="weather-forecast" class="weather-forecast-information">
+        </div>
+      </main>
+         
+        
+      <footer>
+        This project was Coded by <a href="https://github.com/LesheEagles" target="_blank">Leshe Eagles</a>, is
+        <a href="https://github.com/LesheEagles/Weather-App-Week-7.git" target="_blank">on Github</a>,
+        and website hosted <a href="https://week7weatjerapp.netlify.app" target="_blank">on Netlify</a>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
